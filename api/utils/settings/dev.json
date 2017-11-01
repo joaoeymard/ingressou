@@ -1,0 +1,22 @@
+{
+	"listen": "0.0.0.0:4001",
+	"cookieName": "development",
+	"hashKey": "the-big-and-secret-fash-key-here",
+	"blockKey": "lot-secret-of-characters-big-too",
+	"database": {
+		"connectionRw": {
+			"host": "localhost port=5432",
+			"user": "postgres",
+			"pass": "ro5hAth5@a&rafot",
+			"database": "ingressoscariri",
+			"maxOpenConn": 10
+		},
+		"connectionRo": {
+			"host": "localhost port=5432",
+			"user": "postgres",
+			"pass": "ro5hAth5@a&rafot",
+			"database": "ingressoscariri",
+			"maxOpenConn": 10
+		}
+	}
+}
