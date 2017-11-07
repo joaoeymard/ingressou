@@ -3,7 +3,7 @@ package postgres
 import (
 	"fmt"
 
-	"github.com/JoaoEymard/ingressoscariri/api/v1/utils"
+	"github.com/JoaoEymard/ingressou/api/v1/utils"
 	// _ Importanto apenas o init
 	_ "github.com/lib/pq"
 )

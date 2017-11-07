@@ -1,7 +1,7 @@
 package atributo
 
 import (
-	"github.com/JoaoEymard/ingressoscariri/api/v1/utils"
+	"github.com/JoaoEymard/ingressou/api/v1/utils"
 )
 
 var (

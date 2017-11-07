@@ -1,10 +1,10 @@
 package v1
 
 import (
-	ctrlAuth "github.com/JoaoEymard/ingressoscariri/api/v1/controllers/auth"
-	"github.com/JoaoEymard/ingressoscariri/api/v1/controllers/contato"
-	"github.com/JoaoEymard/ingressoscariri/api/v1/controllers/evento"
-	"github.com/JoaoEymard/ingressoscariri/api/v1/controllers/usuario"
+	ctrlAuth "github.com/JoaoEymard/ingressou/api/v1/controllers/auth"
+	"github.com/JoaoEymard/ingressou/api/v1/controllers/contato"
+	"github.com/JoaoEymard/ingressou/api/v1/controllers/evento"
+	"github.com/JoaoEymard/ingressou/api/v1/controllers/usuario"
 	"github.com/gorilla/mux"
 )
 

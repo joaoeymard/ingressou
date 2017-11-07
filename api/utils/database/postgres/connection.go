@@ -5,7 +5,7 @@ import (
 
 	"sync"
 
-	"github.com/JoaoEymard/ingressoscariri/api/utils/settings"
+	"github.com/JoaoEymard/ingressou/api/utils/settings"
 	// _ Importanto apenas o init
 	_ "github.com/lib/pq"
 )

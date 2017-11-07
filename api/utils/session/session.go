@@ -1,7 +1,7 @@
 package session
 
 import (
-	"github.com/JoaoEymard/ingressoscariri/api/utils/settings"
+	"github.com/JoaoEymard/ingressou/api/utils/settings"
 	"github.com/gorilla/sessions"
 )
 

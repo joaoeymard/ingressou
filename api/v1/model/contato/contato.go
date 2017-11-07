@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/JoaoEymard/ingressoscariri/api/utils/database/postgres"
-	"github.com/JoaoEymard/ingressoscariri/api/v1/model/contato/atributo"
-	"github.com/JoaoEymard/ingressoscariri/api/v1/utils"
+	"github.com/JoaoEymard/ingressou/api/utils/database/postgres"
+	"github.com/JoaoEymard/ingressou/api/v1/model/contato/atributo"
+	"github.com/JoaoEymard/ingressou/api/v1/utils"
 )
 
 const (

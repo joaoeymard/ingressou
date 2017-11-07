@@ -9,12 +9,12 @@ import (
 
 	"github.com/gorilla/handlers"
 
-	"github.com/JoaoEymard/ingressoscariri/api"
-	"github.com/JoaoEymard/ingressoscariri/api/utils/database/postgres"
-	"github.com/JoaoEymard/ingressoscariri/api/utils/logger"
-	"github.com/JoaoEymard/ingressoscariri/api/utils/settings"
+	"github.com/JoaoEymard/ingressou/api"
+	"github.com/JoaoEymard/ingressou/api/utils/database/postgres"
+	"github.com/JoaoEymard/ingressou/api/utils/logger"
+	"github.com/JoaoEymard/ingressou/api/utils/settings"
 	"github.com/gorilla/mux"
-	//sql "github.com/JoaoEymard/ingressoscariri/service/core/database"
+	//sql "github.com/JoaoEymard/ingressou/service/core/database"
 )
 
 var (

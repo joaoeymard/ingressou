@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/JoaoEymard/ingressoscariri/api/utils/logger"
-	"github.com/JoaoEymard/ingressoscariri/api/v1/utils"
+	"github.com/JoaoEymard/ingressou/api/utils/logger"
+	"github.com/JoaoEymard/ingressou/api/v1/utils"
 )
 
 // Methods Divisão de rotas para gerenciar o controller
