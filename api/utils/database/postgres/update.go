@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/JoaoEymard/ingressou/api/v1/utils"
 	// _ Importanto apenas o init
 	_ "github.com/lib/pq"
 )
@@ -65,10 +64,6 @@ func UpdateOne(tabela string, params map[string]interface{}, where string) (map[
 
 		dados = rowsValues
 
-	}
-
-	if dados == nil {
-		return nil, utils.BancoDadosMethod("atualizar")
 	}
 
 	return dados, nil

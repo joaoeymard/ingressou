@@ -3,7 +3,6 @@ package postgres
 import (
 	"fmt"
 
-	"github.com/JoaoEymard/ingressou/api/v1/utils"
 	// _ Importanto apenas o init
 	_ "github.com/lib/pq"
 )
@@ -43,10 +42,6 @@ func DeleteOne(tabela string, where string) (map[string]interface{}, error) {
 
 		dados = rowsValues
 
-	}
-
-	if dados == nil {
-		return nil, utils.BancoDadosMethod("deletar")
 	}
 
 	return dados, nil

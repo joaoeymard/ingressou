@@ -34,7 +34,7 @@ func Insert(contentBody io.ReadCloser, params url.Values) ([]byte, int, error) {
 
 	err = json.Unmarshal(content, &contentJSON)
 	if err != nil {
-		return nil, http.StatusBadRequest, err
+		return nil, http.StatusBadRequest, utils.FormatError(err)
 	}
 
 	if err = atributo.ValidValues(contentJSON); err != nil {
@@ -63,7 +63,7 @@ func Insert(contentBody io.ReadCloser, params url.Values) ([]byte, int, error) {
 
 	retorno, err := json.Marshal(rows)
 	if err != nil {
-		return nil, http.StatusBadRequest, err
+		return nil, http.StatusBadRequest, utils.FormatError(err)
 	}
 
 	return retorno, http.StatusCreated, nil
@@ -86,17 +86,21 @@ func Update(contentBody io.ReadCloser, params url.Values) ([]byte, int, error) {
 
 	err = json.Unmarshal(content, &contentJSON)
 	if err != nil {
-		return nil, http.StatusBadRequest, err
+		return nil, http.StatusBadRequest, utils.FormatError(err)
 	}
 
 	values := map[string]interface{}{
-		"nome":            contentJSON["nome"],
-		"senha":           contentJSON["senha"],
-		"ativo":           contentJSON["ativo"],
-		"cpf":             contentJSON["cpf"],
-		"data_nascimento": contentJSON["data_nascimento"],
-		"sexo":            contentJSON["sexo"],
-		"nivel":           contentJSON["nivel"],
+		"cep":                 contentJSON["cep"],
+		"bairro":              contentJSON["bairro"],
+		"cidade":              contentJSON["cidade"],
+		"email":               contentJSON["email"],
+		"endereco":            contentJSON["endereco"],
+		"complemento":         contentJSON["complemento"],
+		"referencia":          contentJSON["referencia"],
+		"telefone_principal":  contentJSON["telefone_principal"],
+		"telefone_secundario": contentJSON["telefone_secundario"],
+		"telefone_terciario":  contentJSON["telefone_terciario"],
+		"uf":                  contentJSON["uf"],
 	}
 
 	where := fmt.Sprintf("id = %v", params.Get("contatoID"))
@@ -106,9 +110,13 @@ func Update(contentBody io.ReadCloser, params url.Values) ([]byte, int, error) {
 		return nil, http.StatusBadRequest, utils.BancoDados(err)
 	}
 
+	if rows == nil {
+		return nil, http.StatusNotFound, utils.Errors["NOT_FOUND"]
+	}
+
 	retorno, err := json.Marshal(rows)
 	if err != nil {
-		return nil, http.StatusBadRequest, err
+		return nil, http.StatusBadRequest, utils.FormatError(err)
 	}
 
 	return retorno, http.StatusNoContent, nil
@@ -131,7 +139,11 @@ func Delete(params url.Values) ([]byte, int, error) {
 
 	retorno, err := json.Marshal(rows)
 	if err != nil {
-		return nil, http.StatusBadRequest, err
+		return nil, http.StatusBadRequest, utils.FormatError(err)
+	}
+
+	if rows == nil {
+		return nil, http.StatusNotFound, utils.Errors["NOT_FOUND"]
 	}
 
 	return retorno, http.StatusNoContent, nil
