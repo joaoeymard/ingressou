@@ -1,0 +1,238 @@
+@import "../lib/animate/animate.min.css";
+
+/* Colors */
+.text-primary { color: #004B79 !important }
+.text-secondary { color: #EA8258 !important }
+.text-info { color: #007AC5 !important }
+.text-warning { color: #FFAC6B !important }
+.text-light { color: #FAFAFC !important }
+
+.bg-primary { background-color: #004B79 !important }
+.bg-secondary { background-color: #EA8258 !important }
+.bg-info { background-color: #007AC5 !important }
+.bg-warning { background-color: #FFAC6B !important }
+.bg-dark { background-color: #404040 !important }
+.bg-light { background-color: #FAFAFC !important }
+
+.bg-page { background-color: #595857 !important }
+
+/* Root */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.btn {
+  font-weight: 200;
+  cursor: pointer !important;
+}
+.font-ligh {
+  font-weight: 200;
+}
+.font-normal {
+  font-weight: 400;
+}
+.font-bold {
+  font-weight: 600;
+}
+.font-120 {
+  font-size: 1.2em
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+button, input {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Estilos */
+.list-home-eventos .card {
+  text-decoration: none !important;
+  outline: none !important;
+  background-color: #404040;
+  overflow: hidden;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+
+.list-home-eventos .card .btn-card-comprar {
+  position: absolute;
+  top: calc(50% - 18px);
+  width: calc(100% - 40px);
+
+  animation-name: fadeOutLeft;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+.list-home-eventos .card .card-descricao, .list-home-eventos .card .card-title {
+  animation-name: fadeInRight;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+.list-home-eventos .card:hover .card-descricao, .list-home-eventos .card:hover .card-title, .list-home-eventos .card:focus .card-descricao, .list-home-eventos .card:focus .card-title {
+  animation-name: fadeOutLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.list-home-eventos .card:hover, .list-home-eventos .card:focus {
+  animation-name: pulse;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+.list-home-eventos .card:hover .btn-card-comprar, .list-home-eventos .card:focus .btn-card-comprar {
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.btn-group-shared {
+  overflow: hidden;
+}
+.btn-group-shared > button {
+  z-index: 10;
+}
+.btn-group-shared .group-sub-menu {
+  margin-left: -45px;
+  z-index: 99;
+
+  animation-name: fadeOutLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.btn-group-shared:hover .group-sub-menu {
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+header {
+  background-color: #FAFAFC;
+  border-bottom: 1px solid #000;
+  box-shadow: 0 5px 5px #333
+}
+#navbarMenu .navbar-nav {
+  border-top: 1px solid #dfdfdf
+}
+.card .card-img-top { border-bottom: 1px solid #fff }
+.card .card-body {
+  font-size: 12px !important;
+}
+.card .card-body .card-title {
+  font-size: 18px !important;
+}
+.card-mais-eventos { height: calc(100% - 16px); }
+.card-mais-eventos .mdi { font-size: 50px; }
+.card-mais-eventos .mdi.rotate {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.card-mais-eventos img {
+  display: none;
+}
+.card-mais-eventos.active img {
+  display: block;
+}
+.card-mais-eventos.active .mdi {
+  display: none;
+}
+.banner-evento {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(20, 20, 20, 0.8);
+  background-blend-mode: multiply;
+}
+header .mdi {
+  font-size: 36px !important;
+}
+footer {
+  background-color: #222;
+}
+
+.slide-date-ingressos {
+  position: relative;
+  background-color: rgba(230, 230, 230, 0.6);
+}
+.slide-date-ingressos button {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  margin: 0;
+  border: 0;
+  background-color: rgba(200, 200, 200, 0.6);
+}
+.slide-date-ingressos button.prev{
+  left: 0;
+}
+.slide-date-ingressos button.next{
+  right: 0;
+}
+.slide-date-ingressos ul {
+  list-style: none;
+  padding: 0 41px 0;
+  margin: 0;
+}
+.slide-date-ingressos ul li.active {
+  background-color: rgba(200, 200, 200, 0.6);
+}
+.slide-date-ingressos ul li {
+  float: left;
+  width: 80px;
+  margin: 0 1px 0 0;
+  padding: 0;
+  background: transparent;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+}
+.slide-date-ingressos ul li .data {
+  line-height: 20px;
+  font-size: 15px;
+}
+.slide-date-ingressos ul li .semana {
+  line-height: 20px;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.box-tipo-ingressos ul {
+  list-style: none;
+  overflow: hidden;
+}
+.box-tipo-ingressos ul li {
+  display: none;
+}
+.box-tipo-ingressos ul li.active {
+  display: block;
+}
+
+
+/* Responsividade */
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (max-width: 576px) {
+  header {
+    font-size: 0.8em;
+  }
+  header .mdi {
+    font-size: 25px !important;
+  }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 1200px) {}
