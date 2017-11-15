@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="">
+
+  <title>Ingressou</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <!-- Font -->
+  <link href="./css/open_sans.css" rel="stylesheet">
+
+  <!-- Estilo bootstrap -->
+  <link rel="stylesheet" href="./lib/bootstrap_v4/css/bootstrap.min.css">
+  <!-- Arquivo de estilo -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Webfonts icons do google -->
+  <link rel="stylesheet" href="./lib/webfont/css/materialdesignicons.min.css">
+
+  <!-- Inclusão por tag js (ex.: include='caminho') -->
+  <script src="./lib/include/myInclude.js" charset="utf-8"></script>
+</head>
+<body class="bg-page">
+  <!-- Seu site -->
+
+  <header class="text-dark">
+    <div class="container">
+      <div class="row pt-5 pb-4 pb-sm-4 pt-sm-5 align-items-center navbar navbar-expand-lg">
+        <div class="d-block d-sm-none mx-5 pb-4">
+          <img src="./img/logo.png" alt="" class="w-100">
+        </div>
+        <div class="col">
+          <ul class="navbar-nav mr-auto flex-row">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="mdi mdi-menu text-dark"></span>
+            </button>
+            <li class="nav-item">
+              <a href="#" class="mdi mdi-magnify text-dark px-2" data-toggle="collapse" data-target="#navbarSearch" aria-controls="navbarSearch"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3 d-none d-sm-block">
+          <img src="./img/logo.png" alt="" class="w-100">
+        </div>
+        <div class="col">
+          <ul class="navbar-nav ml-auto flex-row-reverse">
+            <li class="nav-item d-flex align-items-center">
+              Olá, visitante <a href="#" class="mdi mdi-account-circle text-dark px-2"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container d-flex justify-content-center">
+      <nav id="navbarSearch" class="collapse b">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </nav>
+    </div>
+
+    <div class="navbar navbar-expand-lg navbar-light pb-0">
+      <nav id="navbarMenu" class="collapse navbar-collapse">
+        <div class="container">
+          <ul class="navbar-nav mr-auto w-100 py-2">
+            <li class="nav-item pt-0 px-2">
+              <a class="font-normal nav-link text-uppercase text-dark" href="#">home</a>
+            </li>
+            <li class="nav-item py-0 px-2">
+              <a class="font-normal nav-link text-uppercase text-dark" href="#">meus pedidos</a>
+            </li>
+            <li class="nav-item py-0 px-2">
+              <a class="font-normal nav-link text-uppercase text-dark" href="#">informações</a>
+            </li>
+            <li class="nav-item py-0 px-2">
+              <a class="font-normal nav-link text-uppercase text-dark" href="#">ajuda</a>
+            </li>
+            <li class="nav-item py-0 px-2">
+              <a class="font-normal nav-link text-uppercase text-dark" href="#">fale conosco</a>
+            </li>
+            <li class="ml-auto nav-item py-0 px-2">
+              <a class="font-normal nav-link text-uppercase text-dark" href="#">entrar</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container py-5 mt-5 px-4 list-home-eventos">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-lg-4">
+        <a href="#" class="card card-evento w-100 mb-3 text-light border-0 rounded-0" style="background-image: url('./img/banner_eventos/01.png')">
+          <img class="card-img-top rounded-0" src="./img/banner_eventos/01.png" alt="Card image cap">
+          <div class="card-body" style="position: relative">
+            <h5 class="card-title font-weight-normal text-truncate">Natiruts</h5>
+            <div class="font-ligh row card-descricao">
+
+              <div class="col">
+                <span class="mdi mdi-calendar text-warning"></span> 28/10/2017
+              </div>
+              <div class="col text-right">
+                Recife - PE <span class="mdi mdi-map-marker text-warning"></span>
+              </div>
+            </div>
+            <span class="btn btn-success btn-card-comprar border-0 rounded-0 btn-block px-3 px-sm-5">Comprar</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <a href="#" class="card card-evento w-100 mb-3 text-light border-0 rounded-0" style="background-image: url('./img/banner_eventos/02.png')">
+          <img class="card-img-top rounded-0" src="./img/banner_eventos/02.png" alt="Card image cap">
+          <div class="card-body" style="position: relative">
+            <h5 class="card-title font-weight-normal text-truncate">Miraculous as aventuras de ladybug</h5>
+
+            <div class="font-ligh row card-descricao">
+              <div class="col">
+                <span class="mdi mdi-calendar text-warning"></span> 28/10/2017
+              </div>
+              <div class="col text-right">
+                Recife - PE <span class="mdi mdi-map-marker text-warning"></span>
+              </div>
+            </div>
+            <span class="btn btn-success btn-card-comprar border-0 rounded-0 btn-block px-3 px-sm-5">Comprar</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <a href="#" class="card card-evento w-100 mb-3 text-light border-0 rounded-0" style="background-image: url('./img/banner_eventos/03.png')">
+          <img class="card-img-top rounded-0" src="./img/banner_eventos/03.png" alt="Card image cap">
+          <div class="card-body" style="position: relative">
+            <h5 class="card-title font-weight-normal text-truncate">Suassuna</h5>
+
+            <div class="font-ligh row card-descricao">
+              <div class="col">
+                <span class="mdi mdi-calendar text-warning"></span> 28/10/2017
+              </div>
+              <div class="col text-right">
+                Recife - PE <span class="mdi mdi-map-marker text-warning"></span>
+              </div>
+            </div>
+            <span class="btn btn-success btn-card-comprar border-0 rounded-0 btn-block px-3 px-sm-5">Comprar</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <a href="#" class="card card-evento w-100 mb-3 text-light border-0 rounded-0" style="background-image: url('./img/banner_eventos/04.png')">
+          <img class="card-img-top rounded-0" src="./img/banner_eventos/04.png" alt="Card image cap">
+          <div class="card-body" style="position: relative">
+            <h5 class="card-title font-weight-normal text-truncate">A volta do comandante</h5>
+
+            <div class="font-ligh row card-descricao">
+              <div class="col">
+                <span class="mdi mdi-calendar text-warning"></span> 28/10/2017
+              </div>
+              <div class="col text-right">
+                Recife - PE <span class="mdi mdi-map-marker text-warning"></span>
+              </div>
+            </div>
+            <span class="btn btn-success btn-card-comprar border-0 rounded-0 btn-block px-3 px-sm-5">Comprar</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <a href="#" class="card card-evento w-100 mb-3 text-light border-0 rounded-0" style="background-image: url('./img/banner_eventos/05.png')">
+          <img class="card-img-top rounded-0" src="./img/banner_eventos/05.png" alt="Card image cap">
+          <div class="card-body" style="position: relative">
+            <h5 class="card-title font-weight-normal text-truncate">Arena safadão</h5>
+
+            <div class="font-ligh row card-descricao">
+              <div class="col">
+                <span class="mdi mdi-calendar text-warning"></span> 28/10/2017
+              </div>
+              <div class="col text-right">
+                Recife - PE <span class="mdi mdi-map-marker text-warning"></span>
+              </div>
+            </div>
+            <span class="btn btn-success btn-card-comprar border-0 rounded-0 btn-block px-3 px-sm-5">Comprar</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <a href="javascript:cardMaisEventos()" class="card card-evento card-mais-eventos w-100 mb-3 text-light border-0 rounded-0">
+          <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
+            <span class="mdi mdi-plus-box pt-0 pb-2 px-0 m-0 text-warning" style="line-height: 50px"></span>
+            <img src="./img/spin.svg" alt="" width="50px" height="55px" class="pt-0 pb-2 m-0">
+            <h5 class="font-weight-normal text-truncate m-0">TODOS OS EVENTOS</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pre-footer bg-dark text-light py-5">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-sm-6">
+          <h5>Como entro em contato?</h5>
+          <a href="#" class="mdi mdi-whatsapp mdi-36px text-light"></a>
+          <a href="#" class="mdi mdi-phone mdi-36px text-light"></a>
+          <a href="#" class="mdi mdi-email mdi-36px text-light"></a>
+
+          <h5 class="mt-5">Posso confiar no site?</h5>
+        </div>
+        <div class="col-sm-6 text-right">
+          <h5 class="mt-5 mt-sm-0">Como entro em contato?</h5>
+          <a href="#" class="mdi mdi-facebook-box mdi-36px text-light"></a>
+          <a href="#" class="mdi mdi-instagram mdi-36px text-light"></a>
+          <a href="#" class="mdi mdi-twitter mdi-36px text-light"></a>
+
+          <h5 class="mt-5">Como pago pelos ingressos?</h5>
+        </div>
+        <div class="col-12">
+          <h5 class="mt-5">O que ainda posso ver?</h5>
+          <a href="#" class="btn btn-default text-light px-0 mr-3">Troca de voucher</a>
+          <a href="#" class="btn btn-default text-light px-0 mr-3">Cancelamento</a>
+          <a href="#" class="btn btn-default text-light px-0 mr-3">Termos de uso</a>
+          <a href="#" class="btn btn-default text-light px-0 mr-3">Privacidade e Segurança</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-sm-8 text-center text-sm-left">
+          <p class="m-0 text-light">© 2017 INGRESSOU. Todos os direitos reservados</p>
+        </div>
+        <div class="col-sm-4 text-center text-sm-right mt-3 mt-sm-0">
+          <img src="./img/logo_branca.png" alt="" height="50px">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript jquery -->
+  <script src="./lib/jquery/jquery-3.1.1.min.js" charset="utf-8"></script>
+  <!-- JavaScript popper -->
+  <script src="./lib/bootstrap_v4/js/popper.min.js" charset="utf-8"></script>
+  <!-- JavaScript bootstrap -->
+  <script src="./lib/bootstrap_v4/js/bootstrap.min.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+  $(function () {
+    var list = $(".card-evento")
+    var control = null
+
+    $(document).keydown(function(e){
+      if (e.which === 37 || e.which === 39 || e.which === 27) {
+        if (control === null) { /* Inicializa o focus nos cards */
+          control = 0
+          list[control].focus()
+        }else{
+
+          if(e.which === 27){ /* Tecla para esquerda */
+            list[control].blur()
+
+            return false
+          }
+          if(e.which === 37){ /* Tecla para esquerda */
+            if (list[control-1]) {
+              control = control-1
+              list[control].focus()
+            }
+
+            return false
+          }
+          if(e.which === 39){ /* Tecla para direita */
+            if (list[control+1]) {
+              control = control+1
+              list[control].focus()
+            }
+
+            return false
+          }
+        }
+      }
+    })
+  })
+  function cardMaisEventos() {
+    var elem = $('.card-mais-eventos')
+
+    elem.hasClass('active') ? elem.removeClass('active') : elem.addClass('active')
+  }
+  </script>
+</body>
+</html>
