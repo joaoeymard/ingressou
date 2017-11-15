@@ -15,7 +15,7 @@ import (
 
 const (
 	// Tabela referente ao contato
-	tableUsuarioContato = "t_ingressoscariri_usuario_contato"
+	tableUsuarioContato = "t_ingressou_usuario_contato"
 )
 
 // Insert Adiciona um registro

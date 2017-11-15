@@ -1,6 +1,6 @@
 {
 	"listen": "0.0.0.0:3000",
-	"cookieName": "ingressoscariri",
+	"cookieName": "ingressou",
 	"hashKey": "the-big-and-secret-fash-key-here",
 	"blockKey": "lot-secret-of-characters-big-too",
 	"database": {
@@ -8,14 +8,14 @@
 			"host": "177.126.78.163 port=5432",
 			"user": "postgres",
 			"pass": "ro5hAth5@a&rafot",
-			"database": "ingressoscariri",
+			"database": "ingressou",
 			"maxOpenConn": 10
 		},
 		"connectionRo": {
 			"host": "177.126.78.163 port=5432",
 			"user": "postgres",
 			"pass": "ro5hAth5@a&rafot",
-			"database": "ingressoscariri",
+			"database": "ingressou",
 			"maxOpenConn": 10
 		}
 	}

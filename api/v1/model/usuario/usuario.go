@@ -15,9 +15,9 @@ import (
 
 const (
 	// Tabela referente ao usuario
-	tableUsuario = "t_ingressoscariri_usuario"
-	// Tabela referente ao contato para o inner JOIN
-	tableUsuarioContato = "t_ingressoscariri_usuario_contato"
+	tableUsuario = "t_ingressou_usuario"
+	// Tabela referente ao contato
+	tableUsuarioContato = "t_ingressou_usuario_contato"
 )
 
 // Insert Adiciona um registro
@@ -73,8 +73,8 @@ func Find(params url.Values) ([]byte, int, error) {
 	}
 
 	// Consulta para saber o total de registro
-	sqlTotal := fmt.Sprintf(`SELECT COUNT(USUARIO.id) AS total
-	FROM %v USUARIO
+	sqlTotal := fmt.Sprintf(`SELECT COUNT(TIUSUARIO.id) AS total
+	FROM %v TIUSUARIO
 	%v`, tableUsuario, filter)
 
 	// Retorna um []map com as colunas e valores vindo do banco de dados
@@ -89,16 +89,16 @@ func Find(params url.Values) ([]byte, int, error) {
 	}
 
 	// Consulta para coletar os registro
-	sql := fmt.Sprintf(`SELECT USUARIO.id AS id, USUARIO.nome, USUARIO.ultimo_acesso, USUARIO.ativo, USUARIO.cpf, USUARIO.data_nascimento, USUARIO.sexo, USUARIO.nivel,
+	sql := fmt.Sprintf(`SELECT TIUSUARIO.id AS id, TIUSUARIO.nome, TIUSUARIO.ultimo_acesso, TIUSUARIO.ativo, TIUSUARIO.cpf, TIUSUARIO.data_nascimento, TIUSUARIO.sexo, TIUSUARIO.nivel,
 	(
 		SELECT array_to_json (array_agg (row_to_json(dados_contatos.*) ) )
 		FROM (
-			SELECT USUARIO_CONTATO.id AS contato_id, USUARIO_CONTATO.endereco, USUARIO_CONTATO.complemento, USUARIO_CONTATO.referencia, USUARIO_CONTATO.bairro, USUARIO_CONTATO.cep, USUARIO_CONTATO.cidade, USUARIO_CONTATO.uf, USUARIO_CONTATO.telefone_principal, USUARIO_CONTATO.telefone_secundario, USUARIO_CONTATO.telefone_terciario, USUARIO_CONTATO.email
-			FROM %v USUARIO_CONTATO
-			WHERE USUARIO_CONTATO.id_usuario = USUARIO.id
+			SELECT TIUCONTATO.id AS contato_id, TIUCONTATO.endereco, TIUCONTATO.complemento, TIUCONTATO.referencia, TIUCONTATO.bairro, TIUCONTATO.cep, TIUCONTATO.cidade, TIUCONTATO.uf, TIUCONTATO.telefone_principal, TIUCONTATO.telefone_secundario, TIUCONTATO.telefone_terciario, TIUCONTATO.email
+			FROM %v TIUCONTATO
+			WHERE TIUCONTATO.id_usuario = TIUSUARIO.id
 		) AS dados_contatos
 	) AS contatos
-	FROM %v USUARIO
+	FROM %v TIUSUARIO
 	%v %v %v %v`, tableUsuarioContato, tableUsuario, filter, order, limit, offset)
 
 	// Retorna um []map com as colunas e valores vindo do banco de dados

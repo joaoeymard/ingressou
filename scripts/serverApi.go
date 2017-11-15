@@ -14,7 +14,6 @@ import (
 	"github.com/JoaoEymard/ingressou/api/utils/logger"
 	"github.com/JoaoEymard/ingressou/api/utils/settings"
 	"github.com/gorilla/mux"
-	//sql "github.com/JoaoEymard/ingressou/service/core/database"
 )
 
 var (

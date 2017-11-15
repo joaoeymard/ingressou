@@ -80,7 +80,10 @@ func SelectOne(query string) (map[string]interface{}, error) {
 		return nil, err
 	}
 
-	columns, _ := rows.Columns()
+	columns, err := rows.Columns()
+	if err != nil {
+		return nil, err
+	}
 	valuesRows := make([]interface{}, len(columns))
 	valuesRowsAux := make([]interface{}, len(columns))
 
@@ -121,7 +124,10 @@ func Select(query string) ([]map[string]interface{}, error) {
 		return nil, err
 	}
 
-	columns, _ := rows.Columns()
+	columns, err := rows.Columns()
+	if err != nil {
+		return nil, err
+	}
 	valuesRows := make([]interface{}, len(columns))
 	valuesRowsAux := make([]interface{}, len(columns))
 
